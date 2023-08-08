@@ -1,32 +1,39 @@
 :root {
   --bg-main: #3ab54a;
-}
+  --bg-main-body: #000;
+  --bg-main-text: #fff;
+} 
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
   outline: none;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 html {
   scroll-behavior: smooth;
-  overflow-x: ;: hidden;
+  overflow-x:hidden;
 }
 a {
   color: black;
 }
+.ko
+{
+  color: var(--bg-main-text);
+}
 body {
   overflow-x: hidden !important;
-  background-color: orange;
+  background-color: var(--bg-main-body);
+  color: var(--bg-main-text);
   font-family: "Courier New", Courier, monospace;
 }
 nav {
-  background-color: red;
+  background-color: var(--bg-main);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1pc;
+  padding: 0 2pc;
 }
 nav div {
   display: flex;
@@ -47,7 +54,7 @@ nav div {
   gap: 3pc;
   font-size: 3pc;
   height: 100vh;
-  background-color: yellow;
+  /* background-color: yellow; */
   font-family: "Tektur", cursive;
 }
 .mensaje div {
@@ -67,7 +74,8 @@ nav div {
   flex-direction: column;
 }
 .tow nav {
-  width: 93.5%;
+  width: 95.1%;
+
 }
 .tow nav input {
   border: none;
@@ -77,7 +85,7 @@ nav div {
 .izquierda {
   width: 50%;
   height: 100vh;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,7 +99,7 @@ nav div {
 .derecha {
   width: 50%;
   height: 100vh;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,9 +110,10 @@ nav div {
   grid-template-columns: repeat(3, 1fr);
 }
 .character {
-  background-color: purple;
+  background-color: #232323;
+  color: white;
   display: flex;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   justify-content: center;
   align-items: center;
   padding: 1pc 0.6pc;
@@ -121,7 +130,7 @@ nav div {
 }
 
 footer {
-  background-color: red;
+  background-color: var(--bg-main);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -136,6 +145,18 @@ footer div {
 
 #btnScrollToTop {
   cursor: pointer;
+}
+.pages{
+  display: flex;
+  align-items:center;
+  gap: 1pc;
+  margin: 1pc 0
+}
+.pages button {
+  width: 2pc;
+  height: 2pc;
+  border: none;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 868px) {
@@ -174,8 +195,8 @@ footer div {
     display: none;
   }
   .tow {
-    width: 24pc;
-    background: pink;
+    width: 100%;
+    /* background: pink; */
   }
   .one:nth-child(3){
       flex-direction: column-reverse;

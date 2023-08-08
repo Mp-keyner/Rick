@@ -5,9 +5,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnScrollToTop = document.getElementById("btnScrollToTop");
   const loadMoreButton = document.getElementById("loadMoreButton");
   const loadLessButton = document.getElementById("loadLessButton"); // Agregado el botón de cargar menos
-
+  const nava = document.getElementById("nava"); // Agregado el botón de cargar menos
+  const mode = document.getElementById("mode"); // Agregado el botón de cargar menos
+  const body = document.getElementById("body"); // Agregado el botón de cargar menos
+  const root = document.documentElement;
+  let esColor1 = true;
+ 
   let currentPage = 1;
   const charactersPerPage = 20;
+
+  // mode.addEventListener("click", () => {
+  //   console.log("object")
+  //   root.style.setProperty('--bg-main', 'purple');
+  //   root.style.setProperty('--bg-main', '#3ab54a');
+  // })
+
+
+
+mode.addEventListener('click', () => {
+  if (esColor1) {
+    root.style.setProperty('--bg-main-body', '#fff');
+    root.style.setProperty('--bg-main-text', '#000');
+  } else {
+    root.style.setProperty('--bg-main-body', '#000');
+    root.style.setProperty('--bg-main-text', '#fff');
+  }
+  esColor1 = !esColor1;
+});
+
 
   function mostrarPersonajes(personajes) {
     datosContainer.innerHTML = "";
@@ -90,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadMoreButton.addEventListener("click", () => {
     currentPage++;
     obtenerYMostrarPersonajes(currentPage);
+    nava.scrollIntoView({ behavior: 'smooth' });
   });
 
   loadLessButton.addEventListener("click", () => {
@@ -97,6 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
       currentPage--;
       obtenerYMostrarPersonajes(currentPage);
     }
+    nava.scrollIntoView({ behavior: 'smooth' });
   });
 
   obtenerYMostrarPersonajes(currentPage);

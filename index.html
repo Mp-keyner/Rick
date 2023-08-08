@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rick-And-Morty</title>
     <link rel="stylesheet" href="index.css" />
-    <link rel="shortcut icon" href="./Rick-logo.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/Rick-logo.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,15 +18,15 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body id="body">
     <header>
       <nav>
         <div>
-          <img src="./logo-Nav.svg" alt="" style="width: 3pc" />
+          <img src="./img/logo-Nav.svg" alt="" style="width: 3pc" />
           <span>Rick And Morty</span>
         </div>
         <ul class="barraNav">
-          <li>Mode</li>
+          <li id="mode">Mode</li>
         </ul>
       </nav>
     </header>
@@ -40,7 +40,7 @@
         </div>
         <a href="#one">
           <i
-            class="bx bx-down-arrow-alt bx-fade-up"
+            class="bx bx-down-arrow-alt bx-fade-up ko"
             style="font-size: 10pc"
           ></i>
         </a>
@@ -74,7 +74,7 @@
         </div>
         <div class="derecha">
           <img
-            src="./document.png"
+            src="./img/document.png"
             data-aos="fade-left"
             alt=""
             style="width: 80%; object-fit: cover"
@@ -86,7 +86,7 @@
       <section class="one" id="one">
         <div class="derecha">
           <img
-            src="./fetch.png"
+            src="./img/fetch.png"
             data-aos="fade-right"
             alt=""
             style="width: 80%; object-fit: cover"
@@ -136,7 +136,7 @@
         </div>
         <div class="derecha">
           <img
-            src="./search.png"
+            src="./img/search.png"
             data-aos="fade-left"
             alt=""
             style="width: 80%; object-fit: cover"
@@ -147,7 +147,7 @@
       <section class="tow">
         <nav>
           <div>
-            <img src="./logo-Nav.svg" alt="" style="width: 3pc" />
+            <img src="./img/logo-Nav.svg" alt="" style="width: 3pc" />
             <span>Rick And Morty</span>
           </div>
           <div>
@@ -167,12 +167,14 @@
         <div class="containerDatos">
           <div id="Datos"></div>
         </div>
-        <button id="loadMoreButton">Load More</button>
-        <button id="loadLessButton">More</button>
+        <div class="pages">
+          <button id="loadLessButton"><</button>
+          <button id="loadMoreButton">></button>
+        </div>
       </section>
       <footer>
         <div>
-          <img src="./logo-Nav.svg" alt="" style="width: 3pc" />
+          <img src="./img/logo-Nav.svg" alt="" style="width: 3pc" />
           <span>Rick And Morty - <b>Corte 4</b></span>
         </div>
 
