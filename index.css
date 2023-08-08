@@ -7,9 +7,11 @@
   list-style: none;
   text-decoration: none;
   outline: none;
+  border: 1px solid black;
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: ;: hidden;
 }
 a {
   color: black;
@@ -17,9 +19,6 @@ a {
 body {
   overflow-x: hidden !important;
   background-color: orange;
-  margin: 0;
-  padding: 0;
-  height: 200vh; /* Ajusta la altura para probar el scroll */
   font-family: "Courier New", Courier, monospace;
 }
 nav {
@@ -156,11 +155,13 @@ footer div {
     flex-direction: column;
   }
   .mensaje {
-    height: 45vh;
+    height: 100vh;
   }
-  .mensaje h1,
-  .mensaje p {
-    font-size: 1pc;
+  .mensaje h1{
+    font-size: 3pc;
+  }
+  .mensaje p{
+      font-size: 1pc;
   }
   .izquierda {
     width: 94%;
@@ -173,7 +174,10 @@ footer div {
     display: none;
   }
   .tow {
-    width: 26pc;
+    width: 24pc;
     background: pink;
+  }
+  .one:nth-child(3){
+      flex-direction: column-reverse;
   }
 }
