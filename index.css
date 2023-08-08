@@ -1,0 +1,171 @@
+:root {
+  --bg-main: #3ab54a;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+a {
+  color: black;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 200vh; /* Ajusta la altura para probar el scroll */
+  font-family: "Courier New", Courier, monospace;
+}
+nav {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1pc;
+}
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 1pc;
+}
+.barraNav {
+  display: flex;
+  align-items: center;
+  gap: 1pc;
+}
+.mensaje {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 3pc;
+  font-size: 3pc;
+  height: 100vh;
+  background-color: yellow;
+  font-family: "Tektur", cursive;
+}
+.mensaje div {
+  display: flex;
+  align-items: center;
+  gap: 1pc;
+}
+.one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tow nav {
+  width: 98%;
+}
+.tow nav input {
+  border: none;
+  padding: 0.4pc;
+  border-radius: 4px;
+}
+.izquierda {
+  width: 50%;
+  height: 100vh;
+  border: 1px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1pc;
+  gap: 2pc;
+}
+.izquierda h2 {
+  font-family: "Tektur", cursive;
+}
+.derecha {
+  width: 50%;
+  height: 100vh;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Datos {
+  display: grid;
+  gap: 1pc;
+  grid-template-columns: repeat(3, 1fr);
+}
+.character {
+  background-color: purple;
+  display: flex;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  padding: 1pc 0.6pc;
+  gap: 3pc;
+  border-radius: 5px;
+}
+.character img {
+  width: 10pc;
+  border-radius: 50%;
+}
+.containerDatos {
+  padding: 0 1pc;
+  margin-bottom: 1pc;
+}
+
+footer {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1pc;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  gap: 1pc;
+}
+
+#btnScrollToTop {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 868px) {
+  #Datos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .one {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  #Datos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .one {
+    flex-direction: column;
+  }
+  .mensaje {
+    height: 45vh;
+  }
+  .mensaje h1,
+  .mensaje p {
+    font-size: 1pc;
+  }
+  .izquierda {
+    width: 94%;
+  }
+  .derecha {
+    width: 100%;
+    height: 52vh;
+  }
+}
