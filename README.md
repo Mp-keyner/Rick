@@ -200,3 +200,105 @@ JavaScript utiliza un sistema de prototipos para permitir la herencia entre obje
 
 JavaScript Object Notation (JSON) es un formato de intercambio de datos muy común. Los objetos en JavaScript son compatibles con JSON, lo que facilita la conversión entre los dos formatos.
 
+# Objetos en JS
+Un objeto en JavaScript es una colección de propiedades, donde cada propiedad consiste en un par clave-valor. Las claves son cadenas (strings) que actúan como nombres para acceder a los valores almacenados en el objeto.
+
+*Creación de un Objeto:*
+Puedes crear un objeto en JavaScript de varias maneras. La más común es utilizando la sintaxis de objeto literal:
+
+
+const persona = {
+  nombre: "Juan",
+  edad: 30,
+  profesion: "Desarrollador"
+};
+
+
+*Acceso a Propiedades:*
+Puedes acceder a las propiedades de un objeto utilizando la notación de punto (`objeto.propiedad`) o la notación de corchetes (`objeto["propiedad"]`):
+
+
+console.log(persona.nombre); // Juan
+console.log(persona["edad"]); // 30
+
+
+*Modificación de Propiedades:*
+Puedes cambiar el valor de una propiedad simplemente asignándole un nuevo valor:
+
+
+persona.edad = 31;
+persona.profesion = "Ingeniero";
+
+console.log(persona.edad); // 31
+console.log(persona.profesion); // Ingeniero
+
+
+*Añadir y Eliminar Propiedades:*
+Puedes agregar nuevas propiedades a un objeto o eliminar propiedades existentes:
+
+
+persona.ciudad = "Madrid"; // Agregar nueva propiedad
+delete persona.profesion; // Eliminar propiedad existente
+
+console.log(persona);
+
+
+*Objetos Anidados:*
+Los objetos pueden contener propiedades que son a su vez otros objetos:
+
+javascript
+const coche = {
+  marca: "Toyota",
+  modelo: "Corolla",
+  detalles: {
+    año: 2022,
+    color: "Rojo"
+  }
+};
+
+console.log(coche.detalles.año); // 2022
+
+
+*Métodos:*
+Un método es una función que está asociada a un objeto. Puedes agregar métodos a un objeto de la misma manera que agregas propiedades:
+
+
+const rectangulo = {
+  base: 5,
+  altura: 10,
+  calcularArea: function() {
+    return this.base * this.altura;
+  }
+};
+
+console.log(rectangulo.calcularArea()); // 50
+
+
+*"this" en Métodos:*
+Dentro de un método, la palabra clave `this` hace referencia al objeto en sí mismo. En el ejemplo anterior, `this.base` y `this.altura` hacen referencia a las propiedades del objeto `rectangulo`.
+
+Los objetos en JavaScript son poderosos y versátiles. Puedes usarlos para representar casi cualquier tipo de entidad o concepto en tus programas. Son la base para la programación orientada a objetos en JavaScript y se utilizan ampliamente en el desarrollo web y muchas otras aplicaciones.
+
+
+const persona = {
+  nombre: "Ana",
+  edad: 28,
+  profesion: "Doctora",
+  presentarse: function() {
+    return `Hola, mi nombre es ${this.nombre}, tengo ${this.edad} años y soy ${this.profesion}.`;
+  }
+};
+
+console.log(persona.presentarse());
+
+
+- *Creación del Objeto*: Creamos un objeto llamado `persona` con propiedades como `nombre`, `edad` y `profesion`.
+- *Acceso a Propiedades*: Utilizamos las propiedades del objeto para acceder a la información de la persona.
+- *Método `presentarse`*: Definimos un método llamado `presentarse` que devuelve una cadena de texto que describe la persona y utiliza las propiedades del objeto mediante la palabra clave `this`.
+
+Cuando ejecutes el código, debería imprimir en la consola:
+
+
+Hola, mi nombre es Ana, tengo 28 años y soy Doctora.
+
+.
