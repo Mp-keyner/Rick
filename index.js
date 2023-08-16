@@ -79,7 +79,7 @@ mode.addEventListener('click', () => {
   }
 
   function obtenerYMostrarPersonajes(page) {
-    const apiUrl = `https://rickandmortyapi.com/api/character/?page=${page}`;
+    const apiUrl = `https://rickandmortyapi.com/api/character/?pages=${page}`;
 
     fetch(apiUrl)
       .then((response) => response.json())

@@ -58,7 +58,8 @@ nav div {
   font-size: 3pc;
   height: 100vh;
   /* background-color: yellow; */
-  font-family: "Tektur", cursive;
+  font-family: "
+  ", cursive;
 }
 .mensaje div {
   display: flex;

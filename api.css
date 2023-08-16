@@ -1,0 +1,23 @@
+:root{
+    --bg-body: #ffffff;
+    --color-text: #000;
+}
+
+.Car{
+    border: 1px solid red;
+    margin: 1pc;
+    border-radius: 6px;
+    text-align: center;
+}
+body {
+    background-color: var(--bg-body);
+    color: var(--color-text)    ;
+}
+#root{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.img{
+    border-radius: 50%;
+    border: 1px solid black;
+}
