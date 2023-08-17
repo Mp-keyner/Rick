@@ -66,6 +66,9 @@ nav div {
   align-items: center;
   gap: 1pc;
 }
+.mensaje h1{
+  font-family: "Tektur", cursive ;
+}
 .one {
   display: flex;
   align-items: center;

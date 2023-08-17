@@ -3,6 +3,8 @@ const Main = document.getElementById('root')
 const root = document.documentElement;
 const btn = document.getElementById('btn')
 let estado = false
+const after = document.getElementById('after')
+const before = document.getElementById('befo')
 
 
 btn.addEventListener('click', () =>{
@@ -40,3 +42,12 @@ fetch(Url).then(response => {
     console.log(err)
 
 });
+
+
+before.addEventListener('click', () => {
+    console.log('before')
+})
+
+after.addEventListener('click', () => {
+    console.log('after')
+})
